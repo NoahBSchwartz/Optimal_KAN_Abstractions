@@ -1,0 +1,6 @@
+
+Gurobi 12.0.1 (mac64[arm], gurobi_cl) logging started Fri Apr 25 17:37:28 2025
+
+Set parameter TokenServer to value "ucb-licenses.colorado.edu"
+Set parameter LogFile to value "gurobi.log"
+Using license file /Library/gurobi1201/macos_universal2/gurobi.lic

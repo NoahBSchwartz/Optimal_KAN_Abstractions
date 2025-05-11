@@ -139,7 +139,6 @@ class FastKAN(nn.Module):
 
 
 class AttentionWithFastKANTransform(nn.Module):
-    
     def __init__(
         self,
         q_dim: int,

@@ -23,7 +23,7 @@ def graph_ode_results(dataset, model, steps, t_eval, duration):
         plt.plot(y_pred[:, 0], y_pred[:, 1], c='r', marker='o', label='pred')
         plt.grid()
         x0, y0, d = dataset[int(steps)*k, 1:4].detach().numpy()
-        plt.title(f"Test set predictions $x_0={x0:.3f}, y_0={y0:.3f}, d={d:.3f}$")
+        plt.title(f"Predictions $x_0={x0:.3f}, y_0={y0:.3f}, d={d:.3f}$")
         plt.xlabel(r"$x_t$")
         plt.ylabel(r"$y_t$")
         plt.legend()
