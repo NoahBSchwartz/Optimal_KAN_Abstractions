@@ -17,7 +17,7 @@ def system_eq_dis(cond_input, t_eval, time):
     return sol.y.T, sol.t.T
 
 def graph_ode_results(dataset, model, steps, t_eval, duration):
-    for k in range(0, 2):
+    for k in range(0, 1):
         plt.figure(figsize=[5, 4])
         sol, t_h = system_eq_dis(dataset[int(steps)*k, 1:4].detach().cpu(), t_eval.numpy(), duration)
         plt.plot(sol[:, 0], sol[:, 1], c='b', marker='x', label='gt')
