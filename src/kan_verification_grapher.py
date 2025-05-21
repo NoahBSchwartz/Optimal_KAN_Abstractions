@@ -311,6 +311,7 @@ def detailed_metrics_visualization(results: Dict[str, Any], output_dir: str):
     plt.savefig(os.path.join(output_dir, 'detailed_metrics.png'), dpi=300)
     plt.close()
 
+# Experiments Shown in the Paper Visualization
 def create_input_range_summary_plot(results_df, output_dir, segments_per_curve):
     if results_df.empty:
         print("No results to plot.")
@@ -693,7 +694,7 @@ def create_relative_width_ratio_graph(results: Dict[str, Any], output_dir: str):
     plt.xlabel('Output Dimension')
     plt.xticks(x)
     plt.ylim(0, 110)  
-    plt.gca().yaxis.set_major_formatter(PercentFormatter())
+    plt.gca().yaxis.set_major_formatter(plt.PercentFormatter())
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.legend()
     
