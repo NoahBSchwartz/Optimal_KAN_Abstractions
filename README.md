@@ -8,7 +8,7 @@ requirements.
 ![KAN Verification Visualization](images/full_method.png)
 
 # Setup 
-Simply run 
+Simply run:
 ```shell
 pip3 install -r requirements.txt`
 ```
