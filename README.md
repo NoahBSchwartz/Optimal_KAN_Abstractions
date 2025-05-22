@@ -5,7 +5,7 @@ We present a novel approach for verifying properties of Kolmogorov-Arnold Networ
 a knapsack optimization across the network, we minimize the total number of pieces while guaranteeing specified error bounds. This approach determines the optimal approximation strategy for each unit while maintaining overall accuracy
 requirements.
 
-![KAN Verification Visualization](.\images\full_method.png)
+![KAN Verification Visualization](images/full_method.png)
 
 # Setup 
 Simply run `pip3 install -r requirements.txt`.
@@ -13,32 +13,31 @@ Simply run `pip3 install -r requirements.txt`.
 To reproduce the results seen in the paper, use the provided [python script](kan_verification.py) according to the instructions below. For a walkthrough of the code and method used in the paper, refer to the [Jupyter Notebook](kan_verification.ipynb).
 
 # How to reproduce the results shown in the paper
-We provide 
-### Input Range Experiment
+## Input Range Experiment
 To run the input range experiment for a KAN of size [4,15,2] (shown in section 6.1), use: 
 ``` shell
 python3 kan_verification.py --size '[4,15,2]' --experiment_type input_range --timeout_seconds 4000 --segments_per_curve 10
 ```
 Change the flag `--size` to test KANs of a different shape.
 
-### Bound Tightness Experiment
+## Bound Tightness Experiment
 To run the bound tightness experiment for a KAN of size [4,15,2] (shown in section 6.1), use: 
 ``` shell
 python3 kan_verification.py --size '[4,15,2]' --experiment_type input_range --timeout_seconds 4000 --segments_per_curve 10
 ```
 Change the flag `--size` to test KANs of a different shape.
 
-### MNIST Experiment
+## MNIST Experiment
 To obtain the verification times for a KAN trained on the MNIST dataset (shown in section 6.1), use:
 ``` shell
 python3 kan_verification.py --size '[784,16,10]' --experiment_type single_run --input_bounds '[-5.0, 5.0]' --segments_per_curve 10
 ```
 
-### CIFAR10 Experiment
+## CIFAR10 Experiment
 To obtain the verification times for a KAN trained on the MNIST dataset (shown in section 6.1), use:
 ``` shell
 python3 kan_verification.py --size '[[3072,16,10]]' --experiment_type single_run --input_bounds '[-5.0, 5.0]' --segments_per_curve 10
 ```
 
-![Results](.\images\results.png)
+![Results](images/results.png)
 
