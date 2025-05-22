@@ -25,7 +25,8 @@ Change the flag `--size` to test KANs of a different shape.
 ## Bound Tightness Experiment
 To run the bound tightness experiment for a KAN of size [4,15,2] (shown in section 6.1), use: 
 ``` shell
-python3 kan_verification.py --size '[4,15,2]' --experiment_type input_range --timeout_seconds 4000 --segments_per_curve 10
+python3 kan_verification.py --size '[4,15,2]' --experiment_type bound_tightness --timeout_seconds 6000 --input_bounds '[-0.5, 0.5]'
+
 ```
 Change the flag `--size` to test KANs of a different shape.
 
