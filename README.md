@@ -8,8 +8,10 @@ requirements.
 ![KAN Verification Visualization](images/full_method.png)
 
 # Setup 
-Simply run `pip3 install -r requirements.txt`.
-
+Simply run 
+```shell
+pip3 install -r requirements.txt`
+```
 To reproduce the results seen in the paper, use the provided [python script](kan_verification.py) according to the instructions below. For a walkthrough of the code and method used in the paper, refer to the [Jupyter Notebook](kan_verification.ipynb).
 
 # How to reproduce the results shown in the paper
