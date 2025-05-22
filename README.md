@@ -10,7 +10,7 @@ requirements.
 # Setup 
 Simply run:
 ```shell
-pip3 install -r requirements.txt`
+pip3 install -r requirements.txt
 ```
 To reproduce the results seen in the paper, use the provided [python script](kan_verification.py) according to the instructions below. For a walkthrough of the code and method used in the paper, refer to the [Jupyter Notebook](kan_verification.ipynb).
 
