@@ -39,7 +39,7 @@ python3 kan_verification.py --size '[784,16,10]' --experiment_type single_run --
 ```
 
 ## CIFAR10 Experiment
-To obtain the verification times for a KAN trained on the MNIST dataset (shown in section 6.1), use:
+To obtain the verification times for a KAN trained on the CIFAR10 dataset (shown in section 6.1), use:
 ``` shell
 python3 kan_verification.py --size '[[3072,16,10]]' --experiment_type single_run --input_bounds '[-5.0, 5.0]' --segments_per_curve 10
 ```
