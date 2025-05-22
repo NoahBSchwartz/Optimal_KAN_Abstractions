@@ -1,0 +1,10 @@
+matplotlib
+numpy
+pandas
+pulp
+scipy
+scikit-learn
+torch
+torchvision
+tqdm
+tikzplotlib-patched

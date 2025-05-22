@@ -211,7 +211,6 @@ def visualize_comparison_results(results: Dict[str, Any], output_dir: str):
     plt.tight_layout()
     
     # Show figure before saving
-    plt.show()
     
     os.makedirs(output_dir, exist_ok=True)
     plt.savefig(os.path.join(output_dir, 'output.png'), dpi=300)
@@ -305,7 +304,6 @@ def detailed_metrics_visualization(results: Dict[str, Any], output_dir: str):
     plt.tight_layout()
     
     # Show figure before saving
-    plt.show()
     
     os.makedirs(output_dir, exist_ok=True)
     plt.savefig(os.path.join(output_dir, 'detailed_metrics.png'), dpi=300)
