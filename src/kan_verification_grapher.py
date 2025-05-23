@@ -6,6 +6,7 @@ import os
 import tikzplotlib
 from typing import Dict, Any
 import pandas as pd
+from src.custom_fastkan import FastKAN, FastKANLayer
 
 # ODE Visualization 
 def system_eq_dis(cond_input, t_eval, time):
@@ -692,7 +693,6 @@ def create_relative_width_ratio_graph(results: Dict[str, Any], output_dir: str):
     plt.xlabel('Output Dimension')
     plt.xticks(x)
     plt.ylim(0, 110)  
-    plt.gca().yaxis.set_major_formatter(plt.PercentFormatter())
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.legend()
     
