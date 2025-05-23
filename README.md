@@ -8,7 +8,8 @@ requirements.
 ![KAN Verification Visualization](images/full_method.png)
 
 # Setup 
-Simply run:
+First, download Gurobi according to the instructions [here](https://www.gurobi.com/downloads/gurobi-software/?_gl=1*12jj6mw*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjwlrvBBhDnARIsAHEQgOSwIBO_dz5NNlRpFo-CSdABTro8MMcoiyle7vAFD2LFWFmNT6Mb_NEaAgLjEALw_wcB&gbraid=0AAAAA-OoJU4Z-YNK9ZW1F2Me0vqSR_TU7). Make sure to place Gurobi in the same directory as the `kan_verification.py` script.
+Then, run:
 ```shell
 pip3 install -r requirements.txt
 ```
