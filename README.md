@@ -1,4 +1,4 @@
-This repo provides the official implementation of the paper "Optimal Abstractions for Verifying Properties of Kolmogorov-Arnold Networks (KANs)".
+This repo provides the official implementation of the paper "Optimal Abstractions for Verifying Properties of Kolmogorov-Arnold Networks (KANs)". (Preprint available [here](https://drive.google.com/file/d/119HlL4VYJeT8VpCMdIZHl7_uWTschf_c/view?usp=sharing))
 
 # Overview
 We present a novel approach for verifying properties of Kolmogorov-Arnold Networks (KANs). Our method creates mathematical "abstractions" by replacing each KAN unit with a piecewise affine (PWA) function. These abstractions enable property verification by encoding the problem as a mixed integer linear program (MILP), determining whether outputs satisfy specified properties when inputs belong to a given set. By combining dynamic programming with
