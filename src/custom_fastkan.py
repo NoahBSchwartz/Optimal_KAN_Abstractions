@@ -73,6 +73,24 @@ class FastKANLayer(nn.Module):
             base = self.base_linear(self.base_activation(x))
             ret = ret + base
         return ret
+    
+    def get_all_curves(self, num_pts, num_extrapolate_bins):
+        ng = self.rbf.num_grids # number of grid points in spline
+        h = self.rbf.denominator # width of one single grid section 
+        # For all points: generate x range by taking the minimum grid value and extending it slightly
+        x = torch.linspace(
+            self.rbf.grid_min - num_extrapolate_bins * h,
+            self.rbf.grid_max + num_extrapolate_bins * h,
+            num_pts,
+            device=self.spline_linear.weight.device
+        )
+        # For all points: compute basis (ie. how close is each point to each grid point) and weights 
+        basis = self.rbf(x) 
+        w = self.spline_linear.weight.view(self.output_dim, self.input_dim, ng)
+        # Einstein Summation for speed: multiply "basis activation" (how close x is to the grid) by the "weight" (how high the curve should be at that grid) and sums them up
+        with torch.no_grad():
+             y = torch.einsum('pg, oig -> oip', basis, w)
+        return x.cpu().numpy(), y.cpu().numpy()
 
     def plot_curve(
         self,
